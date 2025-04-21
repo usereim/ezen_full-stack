@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 진열방식(p212)</title>
+    <style>
+      .tag {
+        border: 1px solid #000;
+        width: 200px;
+        height: 100px;
+        margin: 0;
+      }
+
+      .inline {
+        font-size: 40px;
+        display: block;
+      }
+
+      .block {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 블록 태그 -->
+    <div class="block tag">영역태그</div>
+    <h1 class="block tag">제목태그</h1>
+    <p class="block tag">단락태그</p>
+
+    <!-- 인라인 태그 -->
+    <span class="inline tag">인라인영역</span>
+    <a class="inline tag">링크태그</a>
+    <strong class="inline tag">강조태그</strong>
+  </body>
+</html>

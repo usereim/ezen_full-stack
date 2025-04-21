@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* 리셋 코드 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img, iframe{
+  vertical-align: top;
+}
+
+/* 상단영역 */
+header {
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header .inner {
+  border-bottom: 1px solid gray;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+header #home {
+  float: left;
+}
+
+header #sns {
+  float: left;
+}
+
+header #lang {
+  float: right;
+}
+
+header #lang li {
+  float: left;
+}
+
+header #main_logo {
+  float: left;
+}
+
+header #main_menu {
+  float: right;
+  margin-right: 60px;
+}
+
+header #main_menu li{
+  float: left;
+}
+
+/* 메인영역 */
+main {
+  width: 1140px;
+  margin: 20px auto 0;
+}
+
+#main_program {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#main_program li {
+  float: left;
+}
+
+/* 하단영역 */
+footer {
+  width: 1140px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #262b36;
+}
+
+footer img {
+  margin: 20px 0 0 60px;
+}

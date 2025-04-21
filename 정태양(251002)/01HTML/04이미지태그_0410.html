@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--메타 데이터(p74) : 문서를 설명하는 데이터-->
+		<meta charset="utf=8"> <!-- 문자의 인코딩 방식(중요) -->
+		<meta name="author" content="소유자명">
+		<meta name="description" content="문서의 간략설명">
+		<meta name="keywords" content="키워드, 검색어">
+		
+		<title>04 이미지태그(p75) </title>
+	</head>
+	
+	<body>
+		<p><iframe src="메뉴.html" width="600" height="40"
+				frameborder="0"></iframe></p>
+		<h1>이미지 삽입하기</h1>
+		<hr size="5" color="red">
+		
+		<div>
+			<h2>절대경로로 주소지정</h2>
+			<p>최상위 폴더(루트)에서 부터 위치를 지정해 나아가는 방식</p>
+			<p>
+				<img alt="강아지 이미지" width="200" src="C:\Users\MYCOM\Desktop\정태양(251002)\01HTML\강아지.jpg">
+				<img alt="고양이 이미지" width="200" src="C:\Users\MYCOM\Desktop\정태양(251002)\고양이.jpg">
+				<img alt="이미지 간략 설명" width="200" src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fpreviews.123rf.com%2Fimages%2Fqiangongche%2Fqiangongche1410%2Fqiangongche141000053%2F32769932-%25EA%25BD%2583%25EB%2593%25A4.jpg&type=a340">
+				
+				<!-- 
+					alt속성 : 이미지를 설명하는 속성
+						- img태그 사용시 반드시 넣어야 한다.
+						- 설명할 내용이 없어도 넣어야함(alt="")
+				-->
+			</p>
+		</div>
+		<hr>
+		
+		<div>
+			<h2>상대경로로 주소지정</h2>
+			<p>현재 작성문서를 기준으로 위치를 지정해 나아가는 방식</p>
+			<p>
+				<img alt="" src="강아지.jpg" height="200">
+				<img alt="" src="로고/스타벅스.png">
+				<img alt="" src="../고양이.jpg" height="200">
+				
+				<!-- 
+					./ 현재 작성문서가 위치한 폴더
+					../ 한 수준 위 폴더로 이동하여 검색
+					../../ 두 수준 위 폴더오 이동하여 검색
+				-->
+				
+			</p>
+		</div>
+	</body>
+</html>

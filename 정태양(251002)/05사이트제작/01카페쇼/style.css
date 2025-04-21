@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/* 리셋코드 : 태그가 가지고 있는 기본값을 0 또는 none으로 설정 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img, iframe {
+  vertical-align: top; /* 수직정렬을 top으로 밑에 공백이 없어짐 */
+}
+
+/* #header */
+#header {
+  width: 1200px;
+  margin: 0 auto; /* 블록태그 - 가운데 정렬 */
+  border-top: 3px solid #da1f3d;
+  overflow: hidden;
+}
+
+#header .top {
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+#header #sns_menu {
+  float: left;
+  font-size: 0;
+}
+
+#header #sns_menu li {
+  display: inline-block;
+}
+
+#header #user_menu {
+  float: right;
+  font-size: 0;
+}
+
+#header #user_menu li {
+  display: inline-block;
+}
+
+#header #logo {
+  clear: both;
+  float: left;
+  margin-top: 65px;
+}
+
+#header #banner {
+  float: right;
+  margin: 10px 0 14px;
+}
+
+#header #main_menu {
+  float: right;
+  font-size: 0;
+}
+
+#header #main_menu li {
+  display: inline-block;
+}
+/* #header */
+
+/* 메인 영역 */
+#main {
+  width: 1200px;
+  margin: 20px auto 0;
+}
+
+#main_visual {
+  margin-bottom: 60px;
+}
+
+#notice,
+#movie {
+  float: left;
+  margin-left: 24px;
+}
+
+#notice h2,
+#movie h2 {
+  margin-bottom: 20px;
+}
+
+#info {
+  float: left;
+  margin: 68px 0 45px 24px;
+}
+
+#event_list {
+  clear: both;
+  background: url("./images/event_wide_bg.jpg") no-repeat center top/auto 100%;
+  font-family: "나눔고딕", "맑은고딕", "돋움";
+  text-align: center;
+  height: 450px;
+  margin-bottom: 60px;
+}
+
+#event_list h2 {
+  font-size: 35px;
+  padding: 40px 0;
+}
+
+#event_list li {
+  float: left;
+  width: 18%;
+  margin: 0 1%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#event_list img {
+  width: 100%;
+  border-radius: 50%; /* 둥근 원 */
+  margin-bottom: 25px;
+}
+
+#forum h2,
+#ads h2 {
+  margin-bottom: 20px;
+}
+
+#forum {
+  float: left;
+}
+
+#ads {
+  float: right;
+  margin-right: 5px;
+}
+
+#host_list {
+  clear: both;
+  text-align: center;
+  overflow: hidden;
+}
+
+#host_list h2{
+  padding: 65px 0 40px;
+}
+
+#host_list li {
+  float: left;
+  width: 25%;
+}
+/* 메인 영역 */
+
+#footer {
+  border: 10px solid #0f0;
+  display: none;
+}

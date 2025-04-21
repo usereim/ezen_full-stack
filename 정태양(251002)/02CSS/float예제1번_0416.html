@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float예제 1번</title>
+  <style>
+    #box {
+      border: 10px solid #000;
+      overflow: hidden;
+      width: 300px;
+    }
+
+    #box div {
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+
+    #box div:nth-of-type(3n + 1) {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div style="background: green;"></div>
+    <div style="background: blue;"></div>
+    <div style="background: #ddd;"></div>
+    <div style="background: #ffd;"></div>
+    <div style="background: yellow;"></div>
+    <div style="background: #abf;"></div>
+    <div style="background: #abc;"></div>
+    <div style="background: #aaa;"></div>
+    <div style="background: #faf;"></div>
+
+  </div>
+</body>
+</html>

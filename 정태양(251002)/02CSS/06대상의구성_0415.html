@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06 대상의 구성(p172)</title>
+  <style>
+    /*모든요소(*) : *{}
+    */
+    *{
+      margin: 0;
+    }
+
+    /*복수대상(여러 요소 지정)*/
+    h3, h4, p {
+      border: 1px solid #000;
+    }
+
+    /*위치적인 조건부여(조상 - 자손)*/
+    #box div {
+      border: 10px groove #f00;
+      margin-bottom: 10px;
+    }
+
+    #box p {
+      font-family: "궁서";
+    }
+
+    /*위치적인 조건부여(부모 - 자식)*/
+    #box > p {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /*바로 다음에 오는 요소(형제요소)*/
+    h3 + p {
+      color: #0f0;
+    }
+
+    /*뒤에 오는(밑에 있는) 모든 형제요소*/
+    h4 ~ p {
+      color: #00f;
+    }
+
+    /*정밀 대상*/
+    h1#this.abc.def {
+      font-size: 50px;
+      background: #ffc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="this" class="abc def">대상의 구성</h1>
+  <div id="box">
+    <p>CSS에서 셀렉트를 조합하여 대상을 구성하는 방식학습</p>
+    <div>
+      <h3>제목태그</h3>
+      <p>단락태그</p>
+      <p>단락태그</p>
+      <p>단락태그</p>
+    </div>
+    <div>
+      <p>단락태그</p>
+      <h4>제목태그</h4>
+      <p>단락태그</p>
+      <p>단락태그</p>
+    </div>
+  </div>
+</body>
+</html>

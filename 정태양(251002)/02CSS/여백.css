@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+#image {
+  height : 300px;
+  border : 10px solid #f00;
+  padding : 20px 40px 60px 80px;   /*내부 여백*/
+  background : yellow;
+  margin-top : -40px;   /*외부 여백*/
+  margin-left : 80px;
+  margin-bottom: 20px;
+  /*
+    margin과 padding의 표기법
+    : 20px; = 4방향 모두 20px 적용
+    : 20px 40px; = 위아래 20px, 좌우 40px 적용
+    : 20px 40px 60px; = 위 20px, 좌우 40px, 아래 60px 적용
+    : 20px 40px 60px 80px; = 위에서부터 시계방향으로 적용
+
+    분할작성
+    margin-top, margin-left, margin-right, margin-bottom
+    padding-top, padding-left, padding-right, padding-bottom
+  */
+}
+
+.box {
+  margin-top: 50px;
+}

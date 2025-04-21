@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 예제 2번</title>
+  <style>
+    #box {
+      border: 10px solid #000;
+      width: 400px;
+      height: 500px;
+      background-image: url("./짱구.png");
+      background-repeat: no-repeat;
+      background-size: auto 500px;
+      background-position: center top;
+      /* overflow: hidden; */
+    }
+
+    #box div {
+      width: 100px;
+      height: 100px;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    #box div:nth-of-type(4),
+    #box div:nth-of-type(6),
+    #box div:nth-of-type(8),
+    #box div:nth-of-type(10) {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <div class="left" style="background: #03f;"></div>
+    <div class="left" style="background: #031;"></div>
+    <div class="left" style="background: #045;"></div>
+    <div class="left" style="background: #0ff;"></div>
+    <div class="left" style="background: #f3f;"></div>
+    <div class="left" style="background: #ff3;"></div>
+    <div class="right" style="background: #a3f;"></div>
+    <div class="right" style="background: #faf;"></div>
+    <div class="right" style="background: #bbf;"></div>
+    <div class="right" style="background: #bfe;"></div>
+    <div class="right" style="background: #e1f;"></div>
+    <div class="right" style="background: #456;"></div>  
+  </div>
+</body>
+</html>

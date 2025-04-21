@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"> 
+	<!-- dir 속성 : 텍스트의 방향(direction) 
+		- ltr : left to right(기본값)
+		- rtl : right to left
+	-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="정태양">
+		<meta name="description" content="리스트 태그의 사용법">
+		<meta name="keywords" content="목록, 리스트, 순번, 메뉴">
+		
+		<title>06 목록태그(p76)</title>
+	</head>
+	
+	<body>
+		<a id="top"></a>
+		<p><iframe src="메뉴.html" width="600" height="40"
+				frameborder="0"></iframe></p>
+		<h1>목록(리스트)태그 - ol, ul, dl</h1>
+		<hr size="10" color="red">
+		
+		<div>
+			<h2>■순차목록 태그 - &lt;OL&gt;</h2>
+			<p>순서나 흐름이 있는 목록을 구성할 때 사용</p>
+			<!-- 예시 -->
+			
+			<div id="ol">
+				<h3>라면 레시피🍜🍜🍜🍜</h3>
+				<ol type="I" start="1">
+					<li>냄비에 물을 끓인다.</li>
+					<li>면을 넣는다.</li>
+					<li>스프를 넣는다.</li>
+					<li>계란을 넣는다.</li>
+				</ol>
+			</div>
+		</div>	
+		<hr size="400" color="gray">
+		
+		<div id="ul">
+			<h2>■비순차 목록 - &lt;UL&gt;</h2>
+			<p>동일한 성격이나 성질을 지닌 요소들의 목록</p>
+			<!-- 예시 -->
+			
+			<div>
+				<h3>메뉴😋</h3>
+				<ul>
+					<li>김밥 <!-- li 닫는 태그 생략 가능 -->
+					<li>떡볶이
+					<li>순대
+					<li>튀김
+					<li>라면
+				</ul>
+			</div>
+		</div>
+		<hr size="400" color="gray">
+		
+		<div id="dl">
+			<h2>■설명 목록(정의 목록) - &lt;DL&gt;</h2>
+			<p>용어와 그 용어의 부연설명이 같이 이루어진 목록</p>
+			<!-- 예시 -->
+			
+			<div>
+				<h3>사이트 목록📃</h3>
+				<dl>
+					<dt>네이버</dt> <!-- 용어 -->
+						<dd>https://www.naver.com</dd> <!-- 부연설명 -->
+					<dt>구글</dt>
+						<dd>https://www.google.co.kr</dd>
+					<dt>쇼핑몰<dt>
+						<dd>https://www.coupang.com</dd> <!-- 여러개의 dd 구성가능 -->
+						<dd>https://www.auction.co.kr</dd>
+						<dd>https://www.gmarket.co.kr</dd>
+				</dl>
+			</div>
+		</div>
+		<hr size="400" color="gray">
+		<a href="#top">위로</a>
+		
+	</body>
+</html>

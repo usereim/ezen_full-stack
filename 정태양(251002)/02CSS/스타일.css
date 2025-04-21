@@ -1,0 +1,75 @@
+@charset "utf-8";		/*문자 인코딩 정보 표기*/
+/* CSS 구성(p160) */
+대상 {
+	속성 : 속성값;
+	속성 : 속성값;
+	속성 : 속성값 속성값 속성값;
+}
+
+body {
+		background : #ffffcc;
+}
+
+h1 {
+	color : green;
+	background : #6799FF;
+	border : 10px solid #000;
+}
+
+p {
+	border : 5px dashed rgb(255, 0, 0);		/*테두리*/
+	width : 400px;		/*너비*/
+	height : 300px;		/*높이*/
+	font-family : "Arial", "궁서";		/*글씨체(폰트)*/
+	font-size : 24px;		/*글자크기*/
+	color : #00F;		/*글자색*/
+	line-height : 50px;		/*행높이(줄간격)*/
+	text-align : center;		/*글자의 수평정렬 left(기본값), right, center, justify(양쪽정렬)*/
+	letter-spacing : 3px;		/*글자사이간격(자간)*/
+	text-indent : 50px;		/*들여쓰기와 내어쓰기*/
+}
+/*
+	여러개의 폰트를 설정하는 경우
+	: 앞에 설정된 폰트가 지원하지 않거나 없는 경우 차순위로
+	다음에 설정된 폰트가 적용된다.
+	: 위 특징을 활용하여, 언어별 다른 폰트를 적용할 수 있다.
+*/
+
+strong {
+	color : red;
+	font-style : italic;		/*텍스트 기울이기*/
+	text-decoration : underline;		/*밑줄*/
+	/*overline(윗 줄), line-through(취소선)*/
+}
+
+em {
+	font-weight : bold;		/*글자의 굵기 조절(bold는 굵게 적용)*/
+	text-transform : capitalize;		/*모두 대문자*/
+	/* lowercase(모두 소문자), capitalize(단어 첫글자만 대문자)*/
+}
+
+b {
+	font-weight : normal;
+}
+
+i {
+	font-style : normal;
+}
+
+h2 {
+	background : pink;
+	text-align : center;
+	/*
+		단축속성
+		font : [스타일] [굵기] [크기]/[행높이] [글자체];
+	*/
+	font : italic bold 50px/100px "굴림";
+	
+	/*
+		텍스트 그림자 효과
+		text-shadow : 수평위치 수직위치 [블러] 색상;
+	*/
+	text-shadow : 5px 5px 2px white;
+}
+
+/* 주석 */

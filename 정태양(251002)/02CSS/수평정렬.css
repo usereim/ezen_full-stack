@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+* { /* *=모든요소(와일드카드)*/
+  margin: 0;
+}
+
+/* 최상위 요소 = <html> */
+:root {
+  font-size: 30px;
+  text-transform: uppercase; /* 모두 대문자 */
+  color: #00f;
+  font-weight: bold;
+}
+
+div {
+  border: 5px solid #f00;
+  margin-bottom: 40px;
+}
+
+p {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+  border: 2px solid #000;
+}
+
+#box1, #box2 {
+  text-align: center;
+}
+
+#box1 p {
+  display: inline;
+}
+
+#box2 p {
+  display: inline-block;
+}
+
+#box3 p {
+  float: left;
+}
+
+/* 같은 p태그 기준 짝수 순번의 요소*/
+#box3 p:nth-of-type(even) {
+  float: right;
+}
+
+#box3 p:nth-child(4) {
+  clear:both;
+}

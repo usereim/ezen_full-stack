@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 float인식하기</title>
+    <style>
+      #a, #b, #c {
+        width: 100px;
+        height: 100px;
+        background: gray;
+        border: 1px solid #000;
+        float: left;
+      }
+
+      #parent {
+        border: 10px solid #f00;
+        background: #ffc;
+        clear: both;
+        overflow: hidden;
+      }
+
+      #parent div {
+        width: 80px;
+        height: 80px;
+        float: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+
+    <div id="parent">
+      <div style="background: #0f0;"></div>
+      <div style="background: #0ff;"></div>
+      <div style="background: #00f;"></div>
+    </div>
+  </body>
+</html>

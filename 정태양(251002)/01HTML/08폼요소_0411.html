@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>08폼요소(p125-p149)</title>
+	</head>
+	
+	<body>
+		<form action="작성된 데이터를 입력받을 시스템의 주소">
+			<p>
+				<label for="text">텍스트 입력폼 : </label> <!-- <label> : 폼요소의 이름표(p138) -->
+				<input type="text" id="text" placeholder="입력힌트" list="data">
+				<datalist id="data"> <!-- 데이터 목록(p131) -->
+					<option>선택항목1</option>
+					<option value="선택항목2">
+					<option value="선택항목3">
+				</datalist>
+			</p>
+			<p>
+				<label>비밀번호 입력폼 : </label>
+				<input type="password">
+			</p>
+			<p>
+				<input type="button" value="버튼">
+				<input type="submit"> <!-- 폼의 데이타를 서버에 전송하는 버튼 -->
+				<input type="reset"> <!-- 입력된 데이터를 초기화하는 버튼 -->
+			</p>
+		</form>
+	</body>
+</html>
