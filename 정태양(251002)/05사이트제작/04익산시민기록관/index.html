@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 익산시민기록관</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="link_menu">
+    <ul>
+      <li><a href="#"><img src="./images/ext_01.png" alt="랜딩페이지"></a></li>
+      <li><a href="#"><img src="./images/ext_02.png" alt="익산시청"></a></li>
+      <li><a href="#"><img src="./images/ext_03.png" alt="문화도시익산"></a></li> 
+    </ul>
+  </div> <!-- #link_menu --> <!-- 외부 링크로 연결되는 메뉴의 경우에는 header 바깥으로 빼기도 한다.-->
+
+  <header>
+    <div class="inner">
+      <div id="main_logo">
+        <h1><img src="./images/logo.png" alt="익산시민기록관"></h1>
+      </div> <!-- #main_logo -->
+
+      <nav id="main_menu">
+        <ul>
+          <li><a href="#"> <!-- 롤오버이미지 : 마우스 올렸을때 다른 이미지로 전환 -->
+            <img src="./images/main_menu01.png" alt="익산시민기록관" onmouseover="this.src='./images/main_menu01_o.png'" onmouseout="this.src='./images/main_menu01.png'"></a></li>
+          <li><a href="#">
+            <img src="./images/main_menu02.png" alt="컬렉션" onmouseover="this.src='./images/main_menu02_o.png'" onmouseout="this.src='./images/main_menu02.png'"></a></li>
+          <li><a href="#">
+            <img src="./images/main_menu03.png" alt="전시" onmouseover="this.src='./images/main_menu03_o.png'" onmouseout="this.src='./images/main_menu03.png'"></a></li>
+          <li><a href="#">
+            <img src="./images/main_menu04.png" alt="기록이야기" onmouseover="this.src='./images/main_menu04_o.png'" onmouseout="this.src='./images/main_menu04.png'"></a></li>
+          <li><a href="#">
+            <img src="./images/main_menu05.png" alt="시민기록활동" onmouseover="this.src='./images/main_menu05_o.png'" onmouseout="this.src='./images/main_menu05.png'"></a></li>
+          <li><a href="#">
+            <img src="./images/main_menu06.png" alt="기록찾기" onmouseover="this.src='./images/main_menu06_o.png'" onmouseout="this.src='./images/main_menu06.png'"></a></li>
+          <li><a href="#">
+            <img src="./images/main_menu07.png" alt="소식/안내" onmouseover="this.src='./images/main_menu07_o.png'" onmouseout="this.src='./images/main_menu07.png'"></a></li>
+        </ul>
+      </nav> <!-- #main_manu -->
+        
+      <div id="user_menu">
+        <p style="margin-right: 10px;"><img src="./images/search.png" alt=""></p>
+        <p><img src="./images/login.png" alt=""></p>
+      </div> <!-- #user_menu -->
+    </div> <!-- .inner -->
+  </header> <!-- header -->
+
+  <main>
+    <section id="main_banner">
+      <p><img src="./images/메인배너2_공모전2회.png" alt="메인배너"></p>
+    </section> <!-- #main_banner -->
+
+    <section id="search">
+      <form action="검색시스템의 주소">
+        <p><input type="text" placeholder="기록물검색을 위해 검색어를 입력해주세요.">
+          <button>검색</button></p>
+      </form>
+      
+    </section> <!-- #search -->
+
+    <section id="item_menu">
+      <ul>
+        <li style="margin-right: 10px"><img src="./images/item_t.png" alt=""></li>
+        <li class="item_list">
+          <img src="./images/item_01.png" alt="" onmouseover="this.src='./images/item_01_o.png'" onmouseout="this.src='./images/item_01.png'"></li>
+        <li class="item_list">
+          <img src="./images/item_02.png" alt="" onmouseover="this.src='./images/item_02_o.png'" onmouseout="this.src='./images/item_02.png'"></li>
+        <li class="item_list">
+          <img src="./images/item_03.png" alt="" onmouseover="this.src='./images/item_03_o.png'" onmouseout="this.src='./images/item_03.png'"></li>
+        <li class="item_list">
+          <img src="./images/item_04.png" alt="" onmouseover="this.src='./images/item_04_o.png'" onmouseout="this.src='./images/item_04.png'"></li>
+        <li class="item_list">
+          <img src="./images/item_05.png" alt="" onmouseover="this.src='./images/item_05_o.png'" onmouseout="this.src='./images/item_05.png'"></li>
+        <li class="item_list">
+          <img src="./images/item_06.png" alt="" onmouseover="this.src='./images/item_06_o.png'" onmouseout="this.src='./images/item_06.png'"></li>
+        <li class="item_list">
+          <img src="./images/item_07.png" alt="" onmouseover="this.src='./images/item_07_o.png'" onmouseout="this.src='./images/item_07.png'"></li>
+      </ul>
+    </section> <!-- #item_menu -->
+
+    <section id="online">
+      <h2>온라인 전시</h2>
+      <p><img src="./images/more-plus2.png" alt=""></p>
+
+      <div id="online_content">
+        <ul>
+          <li><img src="./images/online01.jpg" alt=""><h3>익산의 추억, 기록으로 기억되다</h3></li>
+          <li><img src="./images/online02.jpg" alt=""><h3>익산교육의 발자취, 기록으로 말하다</h3></li>
+          <li><img src="./images/online03.png" alt=""><h3>익산의 문화예술! 시민의 기록과 추억으로 만나다</h3></li>
+          <li><img src="./images/online04.png" alt=""><h3>익산 근대의 시장, 이리역</h3></li>
+        </ul>
+      </div> <!-- #online_content -->
+    </section> <!-- #online -->
+
+    <section id="collection">
+      <h2>컬렉션</h2>
+      <p><img src="./images/more-plus2.png" alt=""></p>
+
+      <ul>
+        <li>
+          <img src="./images/collection_01.PNG" alt="">
+          <h3>익산시 소장 기록</h3>
+        </li>
+        <li>
+          <img src="./images/collection_02.PNG" alt="">
+          <h3>공모전 기록</h3>
+        </li>
+        <li>
+          <img src="./images/collection_03.PNG" alt="">
+          <h3>분야별 기록</h3>
+        </li>
+      </ul>
+    </section> <!-- #collection -->
+  </main> <!-- main -->
+</body>
+</html>
