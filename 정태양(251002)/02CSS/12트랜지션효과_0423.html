@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12트랜지션효과(p244)</title>
+  <style>
+    #this {
+      width: 100px;
+      height: 100px;
+      background: red;
+      transition-property: all; /* 적용속성 */
+      transition-duration: 2s; /* 전환시간 */
+      transition-timing-function: ease-in; /* 속도변화 */
+      transition-delay: 1s; /* 대기시간 */
+      /*
+        [속도변화] 참고 arof.kr/속도비교.html
+        : ease;(기본값) 처음과 끝이 느리고, 중간이 빠르다.(변폭이 크지않다.)
+        : linear; 처음부터 끝까지 같은 속도
+        : ease-in; 처음에는 느리고, 끝으로 갈수록 빨라짐
+        : ease-out; 처음에는 빠르고, 끝으로 갈수록 느려짐
+        : ease-in-out; 처음과 끝이 느리고, 중간이 빠름
+
+        : steps(); 단계적으로 변화를 줌.
+      */
+      /*
+        단축속성(축약된 표현)
+        transition: 적용속성 전환시간 [속도] [대기시간]
+      */
+      transition: all 2s ease-in-out 1s;
+    }
+    /* 스타일이 변화하는 계기가 필요 */
+
+    #this:hover {
+      width: 200px;
+      height: 200px;
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h2>트랜지션효과 = 전환효과</h2>
+  <p>스타일이 변환(전환)되는 과정을 동적으로 표현</p>
+  <div id="this"></div>
+</body>
+</html>

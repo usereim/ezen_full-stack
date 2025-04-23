@@ -110,8 +110,7 @@
 	- 에릭마이어의 사이트 : https://meyerweb.com/
 	- 리셋코드 오픈소스 다운받기
 		[Toolbox]→[CSS]→[Reset CSS]→[a copy of the file]
-			
-			
+				
 ■ 각도의 단위
 	(1) deg : 육십분법(360deg = 1회전) - ★
 	(2) grad : 그레이드법(400grad = 1회전)
