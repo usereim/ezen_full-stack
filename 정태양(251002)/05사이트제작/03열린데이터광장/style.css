@@ -16,57 +16,46 @@ img {
 /* 리셋 코드 */
 
 /* 상단 */
-header {
+header #seoul {
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  gap: 75px;
 }
 
-header #seoul_logo {
-  float: left;
-  margin-right: 75px;
-}
+header #seoul_logo {}
 
-header #seoul_notice {
-  float: left;
-}
+header #seoul_notice {}
 
 header #seoul_menu {
-  float: right;
+  margin-left: auto;
+  font-size: 0;
 }
 
 header #seoul_menu li {
-  float: left;
+  display: inline-block;
+}
+
+header hr {
+  border: 0;
+  border-top: 1px solid #e4e9f0;
 }
 
 header .inner {
-  border-top: 1px solid #e4e9fe;
-  border-bottom: 1px solid #e4e9fe;
-  clear: both;
-  overflow: hidden;
-  padding: 30px 0;
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header #logo {
-  float: left;
+header #main_menu ul {
+  display: flex;
 }
 
-header #main_menu {
-  float: left;
-  font-size: 0;
-  margin-left: 170px;
-}
-
-header #main_menu li {
-  display: inline-block;
-}
-
-header #user_menu {
-  float: right;
-  font-size: 0;
-}
-
-header #user_menu li {
-  display: inline-block;
+header #user_menu ul {
+  display: flex;
 }
 
 /* 중앙 */
@@ -119,7 +108,7 @@ main .container {
 #data dl:nth-child(3) {
   width: 188px;
   border-left: 1px dashed #c5dbff;
-  border-right: 1px dashed  #c5dbff;
+  border-right: 1px dashed #c5dbff;
 }
 
 #data dt {
@@ -141,6 +130,7 @@ main .container {
 #banner {
   float: right;
 }
+
 /* end : #container*/
 
 #board1 {
@@ -195,7 +185,8 @@ main .container {
 footer {
   width: 1200px;
   margin: 40px auto 0;
-  background: #505256; padding-bottom: 25px;
+  background: #505256;
+  padding-bottom: 25px;
   overflow: hidden;
 }
 
