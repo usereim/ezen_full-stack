@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 Flex 사용법</title>
+
+    <style>
+      #parent {
+        border: 10px solid #000;
+        background: #ffc;
+        width: 80%;
+        height: 400px;
+        display: flex;
+        /* 
+          : flex; - block의 특징을 가짐
+          : inline-flex; - inline-block의 특징을 가짐
+          -> 둘다 안에 배치된 요소를 flex로 설정한다.
+        */
+
+        /* 나열방향 */
+        flex-direction: row;
+
+        /* 메인축정렬 */
+        justify-content: center;
+
+        /* 수직축정렬 */
+        align-items: center;
+
+        /* 원하는 수치만큼 간격주기 */
+        gap: 40px;
+      }
+
+      .child {
+        width: 200px;
+        height: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .box1 {
+        background-color: #f00;
+        order: 1;
+        align-self: flex-start;
+      }
+
+      .box2 {
+        background-color: #0f0;
+        order: 3;
+      }
+
+      .box3 {
+        background-color: #00f;
+        order: 1;
+        align-self: flex-end;
+      }
+
+      .box4 {
+        background-color: #666;
+        /* order: 0;(기본값) */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div class="child box1">box1</div>
+      <div class="child box2">box2</div>
+      <div class="child box3">box3</div>
+      <div class="child box4">box4</div>
+    </div>
+
+    <span>인라인요소</span>
+    
+  </body>
+</html>
