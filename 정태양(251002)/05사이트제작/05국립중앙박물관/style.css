@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* 리셋 코드 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img, iframe {
+  vertical-align: top;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 상단영역 */
+header {
+  width: 1440px;
+  margin: 16px auto 60px;
+}
+
+header #util {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+header #util .link {
+  display: flex;
+  margin-right: 17px;
+}
+
+header #util .link li {
+  border-top: 3px solid #000;
+  margin-right: 4px;
+}
+
+header #util .link li:last-child {
+  margin-right: 0;
+  margin-left: 16px;
+}
+
+header #util .sns {
+  display: flex;
+}
+
+header #util .sns {
+  border-top: 3px solid #000;
+}
+
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .inner #menu ul {
+  display: flex;
+}
+
+header .inner #menu a {
+  font-size: 22px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header .inner #login ul {
+  display: flex;
+}
+
+/* 중앙영역 */
+main {
+  width: 1440px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+#visual {
+  margin-bottom: 40px;
+}
+
+#main1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+#main1 .main1_info {
+  border-bottom: 3px solid #000;
+  width: 1140px;
+}
+
+#main1 .main1_info ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#main1 .main1_link ul {
+  display: flex;
+} 
+
+#main2 > h2 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+#main2 ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main2 .content {
+  width: 313px;
+  height: 450px;
+  border: 1px solid #666;
+  margin-bottom: 20px;
+}
+
+#main2 .content img {
+  width: 100%;
+  height: 100%;
+}
+
+#main2 li .present {
+  border: 1px solid #000;
+  color: white;
+  background-color: #000;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+#main2 li .type {
+  border: 1px solid #000;
+  float: left;
+  padding: 0 10px;
+}
+
+#main2 li p:nth-child(4) {
+  clear: both;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
