@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>05 국립중앙박물관</title>
 
+  <!-- 웹 폰트 연결-->
   <link
     href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,235&family=Dancing+Script:wght@700&family=Dangrek&family=Kalam:wght@300;400;700&family=Moon+Dance&family=Noto+Sans+KR:wght@100..900&family=Tienne:wght@400;700;900&display=swap"
     rel="stylesheet">
+
+  <!-- 스와이퍼 연결-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <link rel="stylesheet" href="style.css" type="text/css">
-
-
 </head>
 
 <body>
@@ -83,9 +87,27 @@
   </header> <!-- header -->
 
   <main>
-    <section id="visual">
-      <p><a href="#"><img src="./images/main.jpg" alt=" "></a></p>
-    </section> <!-- #visual -->
+    <!-- Slider main container -->
+    <section id="main_visual" class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="./images/1337105.jpg" alt="메인1"></div>
+        <div class="swiper-slide"><img src="./images/2086090.jpg" alt="메인2"></div>
+        <div class="swiper-slide"><img src="./images/2360463.jpg" alt="메인3"></div>
+        <div class="swiper-slide"><img src="./images/2446712.jpg" alt="메인4"></div>
+        <div class="swiper-slide"><img src="./images/2786426.jpg" alt="메인5"></div>
+        <div class="swiper-slide"><img src="./images/2807469.jpg" alt="메인6"></div>
+        <div class="swiper-slide"><img src="./images/2819699.png" alt="메인7"></div>
+        <div class="swiper-slide"><img src="./images/2827319.jpg" alt="메인8"></div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section> <!-- #main_visual -->
 
     <section id="main1">
       <div class="main1_info">
@@ -160,6 +182,173 @@
         </li>
       </ul>
     </section> <!-- #main2 -->
+
+    <section id="main3">
+      <h2><img src="./images/icon3.png" alt="" style="margin-right: 15px;">알립니다</h2>
+      <div id="main3_content">
+        <ul class="main3_notice">
+          <li><img src="./images/notice_tab.png" alt=""></li>
+          <li>
+            <p>● 분실물 정보안내</p>
+            <p>2022.11.07</p>
+          </li>
+          <li>
+            <p>● 국립중앙박물관 소장품 큐레이션 서비스 '아침 행복이 뚝뚝' 구독 안내</p>
+            <p>2022.11.07</p>
+          </li>
+          <li>
+            <p>● 메소포타미아실 연계 강연 개최(11/15)</p>
+            <p>2022.11.04</p>
+          </li>
+          <li>
+            <p>● 국립중앙박물관 나들길 송출 음원 목록(11월-'22년 2월)알림</p>
+            <p>2022.11.03</p>
+          </li>
+          <li>
+            <p>● 상설전시관 청자실 휴실 연장 안내</p>
+            <p>2022.11.01</p>
+          </li>
+          <li>
+            <p>● 불교회화실, 불교조각실 부분 임시 휴실 공지(11.4.)</p>
+            <p>2022.11.01</p>
+          </li>
+          <hr>
+        </ul> <!-- .main3_notice -->
+
+        <p class="main3_banner">
+          <img src="./images/banner.png" alt="">
+        </p> <!-- .main3_banner -->
+      </div>
+    </section> <!-- #main3 -->
+
+    <section id="main4">
+      <div class="edu">
+        <h3>교육</h3>
+        <p><img src="./images/edu.png" alt=""></p>
+        <p>새로운 교육플랫폼 모두(MODU)을 만나<br>보세요!</p>
+      </div> <!-- .edu -->
+
+      <div class="event">
+        <h3>행사</h3>
+        <p><img src="./images/show.gif" alt=""></p>
+        <p>가족뮤지컬&lsaquo;드래곤 하이&rsaquo;</p>
+        <p>2022-10-29~2022-11-27</p>
+      </div> <!-- .event -->
+
+      <div class="online">
+        <h3>온라인 전시관</h3>
+        <p><img src="./images/online.png" alt=""></p>
+        <p>세계문화관 인도&middot;동남아시아실-인간을 닮은 신들의 세계</p>
+      </div> <!-- .online -->
+    </section> <!-- #main4 -->
   </main> <!-- main -->
+
+  <footer>
+    <div id="footer_menu">
+      <p><img src="./images/footer_menu.png" alt=""></p>
+      <hr>
+    </div> <!-- #footer_menu -->
+
+    <div id="footer_main">
+      <ul class="footer_ul1">
+        <li><a href="#">문화유산표준관리시스템</a></li>
+        <li><a href="#">청년멘토</a></li>
+        <li><a href="#">VCM 가상명품박물관</a></li>
+      </ul> <!-- .footer_ul1 -->
+
+      <ul class="footer_ul2">
+        <li>
+          <p>관련사이트 바로가기&nbsp;&nbsp;&nbsp;&#94;</p>
+        </li>
+        <li>
+          <p>소속박물관 바로가기&nbsp;&nbsp;&nbsp;&#94;</p>
+        </li>
+        <li>
+          <p>가이드북 다운로드&nbsp;&nbsp;&nbsp;&#94;</p>
+        </li>
+      </ul> <!-- .footer_ul2 -->
+
+      <ul class="footer_ul3">
+        <li>
+          <a href="#">
+            <p>개인정보처리방침</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>영상정보처리기기 운영·관리 규정</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>이용약관</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>전자민원</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>공공데이터개방</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>저작권정책</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>클린신고센터</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>찾아오시는길</p>
+          </a>
+        </li>
+      </ul> <!-- .footer_ul3 -->
+
+      <ul class="footer_ul4">
+        <li>
+          <p><img src="./images/footer_sns.png" alt=""></p>
+        </li>
+        <li>
+          <p>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)</p>
+        </li>
+        <li>
+          <p>대표전화 02-2077-9000</p>
+        </li>
+        <li>
+          <p>© National Museum of Korea.</p>
+        </li>
+        <li>
+          <p><img src="./images/otherbanner.png" alt=""></p>
+        </li>
+      </ul> <!-- .footer_ul4 -->
+    </div> <!-- #footer_main -->
+  </footer> <!-- footer -->
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper("#main_visual", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>
