@@ -184,41 +184,67 @@
     </section> <!-- #main2 -->
 
     <section id="main3">
-      <h2><img src="./images/icon3.png" alt="" style="margin-right: 15px;">알립니다</h2>
+      <h2><img src="./images/icon3.png" alt="">알립니다</h2>
       <div id="main3_content">
-        <ul class="main3_notice">
-          <li><img src="./images/notice_tab.png" alt=""></li>
-          <li>
-            <p>● 분실물 정보안내</p>
-            <p>2022.11.07</p>
-          </li>
-          <li>
-            <p>● 국립중앙박물관 소장품 큐레이션 서비스 '아침 행복이 뚝뚝' 구독 안내</p>
-            <p>2022.11.07</p>
-          </li>
-          <li>
-            <p>● 메소포타미아실 연계 강연 개최(11/15)</p>
-            <p>2022.11.04</p>
-          </li>
-          <li>
-            <p>● 국립중앙박물관 나들길 송출 음원 목록(11월-'22년 2월)알림</p>
-            <p>2022.11.03</p>
-          </li>
-          <li>
-            <p>● 상설전시관 청자실 휴실 연장 안내</p>
-            <p>2022.11.01</p>
-          </li>
-          <li>
-            <p>● 불교회화실, 불교조각실 부분 임시 휴실 공지(11.4.)</p>
-            <p>2022.11.01</p>
-          </li>
-          <hr>
-        </ul> <!-- .main3_notice -->
+        <article class="main3_notice">
+          <input id="tab1" type="radio" name="notice_tab" checked>
+          <label for="tab1">알림</label>
+          <input id="tab2" type="radio" name="notice_tab">
+          <label for="tab2">고시/공고</label>
+          <input id="tab3" type="radio" name="notice_tab">
+          <label for="tab3">채용 안내</label>
+          <input id="tab4" type="radio" name="notice_tab">
+          <label for="tab4">보도자료</label>
 
-        <p class="main3_banner">
-          <img src="./images/banner.png" alt="">
-        </p> <!-- .main3_banner -->
-      </div>
+          <hr>
+
+          <div id="board1">
+            <ul>
+              <li>
+                <!-- 비포 -->
+                <p>특별전 '마나 모아나-신성한 바다의 예술, 오세아니아' 연계 강연회 개최</p>
+                <p>2025.04.30</p>
+                <!-- 에프터 -->
+              </li>
+              <li>
+                <p>2025년 특별전 ‘마나 모아나-신성한 바다의 예술, 오세아니아’를 즐기는 세 가지 방법 안내!</p>
+                <p>2025.04.29</p>
+              </li>
+              <li>
+                <p>가정의 달 맞이, 명사들이 전하는 '어린이에 관한 정다운 이야기' 영상 송출(5월 매주 수요일 오후 8시)</p>
+                <p>2025.04.28</p>
+              </li>
+              <li>
+                <p>2025년 5월 도서관 휴관일 안내</p>
+                <p>2025.04.28</p>
+              </li>
+              <li>
+                <p>2025년 국외박물관 한국실 지원 사업 참여기관 모집 공고</p>
+                <p>2025.04.25</p>
+              </li>
+              <li>
+                <p>2025년 청년세대 참여형 마케팅 제안서 평가 결과 알림</p>
+                <p>2025.04.24</p>
+              </li>
+            </ul>
+          </div>
+
+          <div id="board2"></div>
+          <div id="board3"></div>
+          <div id="board4"></div>
+        </article> <!-- .main3_notice -->
+
+        <article class="notice_banner swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide"><img src="./images/banner1.png" alt=""></li>
+            <li class="swiper-slide"><img src="./images/banner2.jpg" alt=""></li>
+            <li class="swiper-slide"><img src="./images/banner3.png" alt=""></li>
+            <li class="swiper-slide"><img src="./images/banner4.jpg" alt=""></li>
+          </ul>
+
+          <div class="swiper-pagination"></div>
+        </article> <!-- .notice_banner -->
+      </div> <!-- #main3_content -->
     </section> <!-- #main3 -->
 
     <section id="main4">
@@ -349,6 +375,24 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
+    /* 배너 스와이퍼 */
+    const swiper2 = new Swiper('.notice_banner', {
+      // Optional parameters
+      loop: true,
+      speed: 800,
+      effect: 'fade',
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
   </script>
 </body>
+
 </html>

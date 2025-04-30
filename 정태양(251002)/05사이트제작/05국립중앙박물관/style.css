@@ -117,7 +117,7 @@ main {
 
 #main2 > h2 {
   font-size: 46px;
-  margin-bottom: 20px;
+  margin-bottom: 42px;
 }
 
 #main2 ul {
@@ -161,11 +161,18 @@ main {
 #main3 {
   margin-bottom: 60px;
 }
+
 #main3 h2{
   font-size: 46px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  font-weight: 700;
+  margin-bottom: 42px;
+}
+
+#main3 h2 img {
+  width: 27px;
+  height: 42px;
+  vertical-align: middle;
+  margin-right: 20px;
 }
 
 #main3 #main3_content {
@@ -173,16 +180,118 @@ main {
   justify-content: space-between;
 }
 
-#main3 .main3_notice {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* border-bottom: 1px solid #000; */
+
+#main3 #main3_content article {
+  width: 48.2%;
 }
 
-#main3 .main3_notice li {
+#main3 .main3_notice {
+  font-size: 0;
+  border-bottom: 1px solid #000;
+}
+
+#main3 .main3_notice input {
+  display: none;
+}
+
+#main3 .main3_notice label {
+  display: inline-block;
+  width: 21.04%;
+  padding: 1px 6px 15px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.2;
+  color: #666;
+  cursor: pointer;
+}
+
+#main3 .main3_notice input:checked + label {
+  color: #222;
+  font-weight: bold;
+  border-bottom: 4px solid #222;
+}
+
+#main3 .main3_notice hr {
+  border: 0;
+  height: 1px;
+  background: #c2c2c2;
+}
+
+#main3 .main3_notice div {
+  height: 350px;
+  display: none;
+}
+
+#main3 .main3_notice #tab1:checked ~ #board1 {
+  display: block;
+}
+
+#main3 .main3_notice #tab2:checked ~ #board2 {
+  display: block;
+}
+
+#main3 .main3_notice #tab3:checked ~ #board3 {
+  display: block;
+}
+
+#main3 .main3_notice #tab4:checked ~ #board4 {
+  display: block;
+}
+
+#main3 .main3_notice div ul {
+  
+}
+
+#main3 .main3_notice div li {
+  margin-top: 32px;
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+#main3 .main3_notice div li::before {
+  content:"";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #222;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+#main3 .main3_notice div p {
+  font-size: 18px;
+}
+
+#main3 .main3_notice div p:first-child {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #222;
+  font-weight: 500;
+}
+
+#main3 .main3_notice div p:last-child {
+  color: #7c7c7c;
+}
+
+#main3 .main3_notice #board2 {
+  background: #0f0;
+}
+
+#main3 .main3_notice #board3 {
+  background: #00f;
+}
+
+#main3 .main3_notice #board4 {
+  background: #0ff;
+}
+
+#main3 .notice_banner {
+  margin: 0;
 }
 
 #main4 {
