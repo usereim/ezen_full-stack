@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 보강</title>
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      background: #ccc;
+      height: 100%;
+      display: flex;
+      flex-direction: row; /* 메인축 방향 설정 */
+      justify-content: center; /* 메인축 정렬 */
+      align-items: center; /* 교차축 정렬*/
+    }
+
+    .container {
+      border: 10px solid #000;
+      background: #fff;
+      width: 80%;
+      height: 80%;
+      display: flex;
+      gap: 5px;
+      align-items: start;
+    }
+
+    .item {
+      border: 5px solid #f00;
+      flex-basis: 300px;
+    }
+
+    .item:nth-child(1) {
+      background: #fcc;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
+    .item:nth-child(2) {
+      background: #cfc;
+      align-self: center;
+    }
+
+    .item:nth-child(3) {
+      background: #ccf;
+    }
+    /*
+      유연하게 늘리기 
+      : flex-grow
+      : 기본값 = 0 (안 늘어남.)
+      유연하게 줄이기 
+      : flex-shrink
+      : 기본값 = 1 (줄어든다.)
+
+      : flex-basis (width 대신 사용가능)
+
+      - 위 세개 한번에 축약하여 작성하기
+      - flex: [grow] [shrink] [basis];
+    */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+</body>
+</html>
