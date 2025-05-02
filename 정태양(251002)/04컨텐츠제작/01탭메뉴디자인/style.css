@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Ownglyph_ParkDaHyun';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 리셋 코드 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  background: url(./images/wood_bg.jpg) center top;
+  font-family: "Homemade Apple", 'Ownglyph_ParkDaHyun';
+  font-size: 16px;
+  color: #fff;
+  height: 100vh;
+}
+
+#page {
+  max-width: 740px;
+  margin: 100px auto 0;
+}
+
+#page h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 1.5em; /* em : 글자크기의 배수 - 40px의 1.5배*/
+  text-shadow: 0 2px #111;
+}
+
+#page h1 span {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  letter-spacing: 7px;
+}
+
+#tab_design input {
+  display: none;
+}
+
+#tab_design label {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  color: #607291;
+  background: #e5e9ea;
+  width: 6em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+  text-align: center;
+  border-radius: 7px 7px 0 0;
+  transition: all .2s;
+}
+
+#tab_design label i {
+  display: inline-block;
+  width: 0;
+}
+
+#tab_design label i img {
+  opacity: 0; /* 투명하게함. */
+  transition: all .2s;
+}
+
+#tab_design input:checked + label,
+#tab_design label:hover {
+  background: #f9f9f9;
+  box-shadow: 1px -1px 2px #5c5c5c;
+}
+
+#tab_design input:checked + label i,
+#tab_design label:hover i {
+  width: 24px;
+  padding-right: 6px;
+}
+
+#tab_design input:checked + label img,
+#tab_design label:hover img {
+  opacity: 1;
+}
+
+#tab_design #tab_contents article {
+  display: none;
+  background: #f9f9f9;
+  color: #607291;
+  padding: 3%;
+  line-height: 1.3;
+}
+
+#tab_design #tab1:checked ~ #tab_contents #item1 {
+  display: block;
+}
+
+#tab_design #tab2:checked ~ #tab_contents #item2 {
+  display: block;
+}
+
+#tab_design #tab3:checked ~ #tab_contents #item3 {
+  display: block;
+}
+
+#tab_design #tab4:checked ~ #tab_contents #item4 {
+  display: block;
+}
+
+#tab_design #tab5:checked ~ #tab_contents #item5 {
+  display: block;
+}
+
+#tab_desigh #tab_contents article .img {
+  float: left;
+  margin-right: 10px;
+}
+
+#tab_desigh #tab_contents article h3 {
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 1em;
+  color: #111;
+}
