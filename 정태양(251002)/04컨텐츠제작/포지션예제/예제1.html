@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>예제1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      vertical-align: top;
+    }
+
+    body {
+      height: 100vh; /* 화면높이와 동일 */
+      background: url("img1/chicken.png") no-repeat right top fixed #F5EDE3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #얼굴 {
+      border: 5px solid red;
+      position: relative;
+    }
+
+    /* #얼굴 div {
+      outline: 1px solid #000;
+    } */
+
+    #벼슬 {
+      position: absolute;
+      top: -125px;
+      left: 90px;
+    }
+
+    #눈 {
+      position: absolute;
+      top: 130px;
+      left: 93px;
+    }
+
+    #홍조 {
+      position: absolute;
+      top: 163px;
+      left: 78px;
+    }
+
+    #부리 {
+      position: absolute;
+      top: 138px;
+      left: 127px;
+      z-index: 1;
+    }
+
+    #수염 {
+      position: absolute;
+      top: 171px;
+      left: 144px;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="얼굴">
+    <p>
+      <img src="./img1/face.png" alt="">
+    </p>
+    <div id="벼슬">
+      <img src="./img1/hair.png" alt="">
+    </div>
+    <div id="눈"><img src="./img1/eye.png" alt=""></div>
+    <div id="홍조"><img src="./img1/flush.png" alt=""></div>
+    <div id="부리"><img src="./img1/beak.png" alt=""></div>
+    <div id="수염"><img src="./img1/poc.png" alt=""></div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>예제2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      vertical-align: top;
+    }
+
+    body {
+      height: 100vh;
+      background: url("img2/dog.png") no-repeat right top #F5EDE3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* div {
+      outline: 1px solid #000;
+    } */
+
+    #얼굴 {
+      /* border: 5px solid #f00; */
+      position: relative;
+    }
+
+    #왼쪽귀 {
+      position: absolute;
+      top: -112px;
+      left: 20px;
+      z-index: -1;
+    }
+
+    #오른쪽귀 {
+      position: absolute;
+      top: -112px;
+      right: 20px;
+      z-index: -1;
+    }
+
+    #수염 {
+      position: absolute;
+      top: 191px;
+      left: 9px;
+    }
+
+    #그림자 {
+      position: absolute;
+      top: 25px;
+      left: 87px;
+    }
+
+    #왼쪽눈 {
+      position: absolute;
+      top: 215px;
+      left: 138px;
+    }
+
+    #오른쪽눈 {
+      position: absolute;
+      top: 215px;
+      right: 138px;
+    }
+
+    #왼쪽홍조 {
+      position: absolute;
+      top: 270px;
+      left: 136px;
+    }
+
+    #오른쪽홍조 {
+      position: absolute;
+      top: 270px;
+      right: 136px;
+    }
+
+    #코 {
+      position: absolute;
+      top: 215px;
+      left: 239px;
+      z-index: 1;
+    }
+
+    #입 {
+      position: absolute;
+      top: 246px;
+      left: 243px;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="얼굴">
+    <p><img src="img2/face.png" /></p>
+    <div id="왼쪽귀"><img src="./img2/ear_left_out.png" alt=""></div>
+    <div id="오른쪽귀"><img src="./img2/ear_right_out.png" alt=""></div>
+    <div id="수염"><img src="./img2/jaw.png" alt=""></div>
+    <div id="그림자"><img src="./img2/shadow.png" alt=""></div>
+    <div id="왼쪽눈"><img src="./img2/eye_left.png" alt=""></div>
+    <div id="오른쪽눈"><img src="./img2/eye_right.png" alt=""></div>
+    <div id="왼쪽홍조"><img src="./img2/flush_left.png" alt=""></div>
+    <div id="오른쪽홍조"><img src="./img2/flush_right.png" alt=""></div>
+    <div id="코"><img src="./img2/nose.png" alt=""></div>
+    <div id="입"><img src="./img2/mouth.png" alt=""></div>
+  </section>
+</body>
+
+</html>
