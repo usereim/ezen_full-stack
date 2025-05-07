@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19 미디어쿼리</title>
+
+  <!-- 외부 css문서 연결 -->
+  <link rel="stylesheet" href="style1.css" media="tv"> <!-- tv -->
+
+  <style>
+    /* CSS내부에서 외부CSS문서 연결 */
+    @import "style2.css";
+    @import "style2.css" speech; /* 음성출력장치 */
+
+    body {
+      background: #ffc;
+    }
+
+    h1 {
+      color: #00f;
+    }
+
+    /* 프린트(인쇄미리보기 확인가능)*/
+    @media print {
+      body {
+        background: #ccf;
+      }
+
+      h1 {
+        color: #f00;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>미디어 타입에 따른 스타일</h1>
+  <!--
+    all - 모든 디바이스
+    screen - 컴퓨터 디스플레이 (휴대폰, 태블릿 포함.)
+    ...
+  -->
+</body>
+</html>
