@@ -1,0 +1,396 @@
+@charset "utf-8";
+
+/*리셋코드*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  min-width: 1440px;
+}
+
+/*문서의 최소너비를 1440px로 제한*/
+
+.links {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.links ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*상단*/
+header {
+  border-top: 1px solid #efefef;
+}
+
+header .inner {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  align-items: center;
+}
+
+header #gnb ul {
+  display: flex;
+}
+
+header #gnb a {
+  display: block;
+  padding: 20px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-decoration: none;
+  position: relative;
+}
+
+header #gnb li:hover a{
+  color: #0e7876;
+}
+
+header #gnb a:before {
+  content:"";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #0e7876;
+  top: 27px;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+header #gnb li:hover a:before {
+  top: 15px;
+  opacity: 1;
+  transition: all .3s;
+}
+
+header #gnb li {
+  position: relative;
+}
+
+header #gnb li .sub {
+  width: 250px;
+  height: 120px;
+  padding: 30px 20px;
+  border: 1px solid #0e7876;
+  box-shadow: 0 0 24px 0 #0002;
+  background: #fff;
+  position: absolute;
+  border-radius: 16px;
+  top: 85px;
+  left: 0;
+  opacity: 0;
+  transition: all .2s;
+  visibility: hidden;
+}
+
+header #gnb li:hover .sub {
+  top: 65px;
+  opacity: 1;
+  visibility: visible;
+}
+/*
+  display: none; - 진열자체를 안함. 생성을 안한다.
+  opacity: 0; - 영역을 투명하게함. 영역자체는 존재함.
+  visibility: hidden; - 영역을 숨김
+*/
+
+header #util_menu ul {
+  display: flex;
+  gap: 15px;
+}
+
+/*중앙*/
+main {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#main_view img {
+  border-radius: 16px;
+}
+
+#search {
+  margin: 60px 0;
+  border: 1px solid #0e7876;
+  border-radius: 16px;
+  padding: 5px 20px 5px 30px;
+  box-shadow: 0 0 16px #00000011;
+}
+
+#search input {
+  font-size: 18px;
+  height: 60px;
+  line-height: 60px;
+  width: 95%;
+  border: 0;
+}
+
+#search button {
+  border: 0;
+  width: 50px;
+  height: 50px;
+  background: url("./images/ico-archive-search.png") no-repeat center center;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+#statics {
+  background: #ebf4f1;
+  padding: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#statics dt {
+  float: left;
+}
+
+#statics dd {
+  float: left;
+  margin-left: 23px;
+}
+
+#statics dd img {
+  border-radius: 50%;
+}
+
+#statics dd img:hover {
+  box-shadow: 0 13px 17.8px 2.2px #0002;
+}
+
+.contents {
+  margin-top: 80px;
+}
+
+.contents h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+}
+
+.contents .more {
+  float: right;
+  margin-top: -51px;
+}
+
+.contents ul {
+  padding-top: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.contents li {
+  width: calc((100% - (40px * 3)) / 4);
+}
+
+.contents li p {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all .3s;
+  border: 1px solid #ddd;
+}
+
+.contents li:hover p {
+  box-shadow: 0 8px 21px #0002;
+}
+
+.contents li img {
+  width: 100%;
+  transition: all .3s;
+}
+
+.contents li:hover img {
+  transform: scale(1.05);
+}
+
+.contents li h3 {
+  margin-top: 40px;
+  font-size: 22px;
+  color: #333;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#collection li {
+  width: calc((100% - (40px * 2)) / 3);
+}
+
+#community {
+  margin-top: 120px;
+  padding: 60px 0;
+  background: #14a677;
+}
+
+#community .text {
+  font-size: 24px;
+  color: #fff;
+}
+
+#community .link {
+  float: right;
+  margin-top: -60px;
+}
+
+#community .link a {
+  background: #ffd044;
+  height: 60px;
+  display: inline-block;
+  line-height: 60px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 32px 0;
+}
+
+#community li .data {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+#community li .category {
+  font-weight: bold;
+  font-size: 16px;
+  color: #0e7876;
+}
+
+#contribute li h3 {
+  text-align: center;
+}
+
+#media {
+  margin-top: 80px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#media div {
+  padding: 30px;
+}
+
+#media .video {
+  width: 620px;
+  background: #e7f0ee;
+}
+
+#media .paper {
+  width: 270px;
+  background: #deeee3;
+}
+
+#media .audio {
+  width: 250px;
+  background: #edf0e7;
+}
+
+#media div .item img,
+#media div .item iframe {
+  width: 100%;
+  height: 340px;
+}
+
+#media .banner {
+  width: 100%;
+}
+
+/*하단*/
+footer {
+  background: #e4e9e8;
+  padding: 50px 0;
+  display: none;
+}
+
+footer .inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+footer .family_link {
+  float: right;
+}
+
+footer .family_link a {
+  background: #FFF;
+  display: inline-block;
+  width: 320px;
+  height: 62px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  line-height: 62px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+footer .web_mark {
+  float: right;
+  margin-right: 10px;
+}
+
+footer .web_mark img {
+  width: 100px;
+}
+
+footer .btm_logo {
+  margin-bottom: 20px;
+}
+
+footer .btm_menu {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+footer .btm_menu li {
+  float: left;
+  font-size: 16px;
+  border-right: 1px solid #c8cdcc;
+  margin-right: 15px;
+  padding-right: 15px;
+  line-height: 17px;
+}
+
+footer .btm_menu li:last-child {
+  border: 0;
+}
+
+footer .btm_menu li a {
+  color: #37543a;
+  text-decoration: none;
+}
+
+footer .btm_menu li a:hover {
+  text-decoration: underline;
+}
+
+footer .btm_info {
+  font-size: 14px;
+  color: #616766;
+  font-style: normal;
+}
