@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17 포지션</title>
+
+  <style>
+    body {
+      height: 3000px;
+    }
+
+    div {
+      width: 160px;
+      height: 60px;
+      border: 1px solid #000;
+      background: #999;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    #b {
+      background: red;
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      z-index: -1;
+    }
+
+    #d {
+      background: green;
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      z-index: 1;
+    }
+
+    #f {
+      background: blue;
+      position: absolute;
+      top: 90px;
+      left: 90px;
+    }
+
+    #h {
+      background: yellow;
+      position: relative;
+      top: 30px;
+      left: 30px;
+    }
+
+    #j {
+      background: pink;
+      position: sticky;
+      top: 30px;
+      left: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>포지션학습하기(p217)</h1>
+  <hr>
+
+  <div id="a">A</div>
+  <div id="b">B(fixed)</div>
+  <div id="c">C</div>
+  <div id="d">D(absolute)</div>
+  <div id="e">E</div>
+  <div id="f">F(absolute)</div>
+  <div id="g">G</div>
+  <div id="h">H(relative)</div>
+  <div id="i">I</div>
+  <div id="j">J(sticky)</div>
+  <div id="k">K</div>
+  <hr>
+  
+  <p style="white-space: pre;"> <!-- (p71)입력포맷 그대로 출력하는 태그(white-space로도 설정가능) -->
+  position : 위치를 지정하는 방식(기준)을 설정하는 스타일 속성
+    [속성값]
+    :static;  (기본값) 모든 태그에 적용된 기본 설정값
+    :absolute;  상위포지션을 기준으로 위치가 지정된다.
+      상위포지션이 없는 경우, 화면을 기준으로 위치가 지정된다.
+    :relative;  현위치(자기자신)를 기준으로 위치가 지정된다.
+      주로, 상위포지션의 용도로 많이 사용된다.
+    :fixed;  화면을 기준으로 위치가 지정되고, 화면에 고정된다.   
+    :sticky; 수평위치는 부모를 기준으로 설정되고, 수직위치는 임계값을 넘어가면 고정된다.
+      (스크립트를 이용한 방법을 더 선호한다.)
+
+  ※ "static"을 제외한 다른 설정의 경우,
+    추가적으로 위치를 지정하는 속성이 필요하다.
+    위치지정속성 : [top], [left], [right], [bottom]
+
+  ※ 겹쳐진 영역의 순서는 [z-index]속성을 사용하여 제어한다.
+    (1) 기본값은 "0"이다.
+    (2) 큰값이 더 위에 놓여진다.
+    (3) 마이너스값을 사용하면, static요소들보다 밑에 놓여진다.
+    (4) static을 제외한 position 설정요소와 flex-item요소에만 
+        사용할 수 있다.
+  </p>
+</body>
+</html>
