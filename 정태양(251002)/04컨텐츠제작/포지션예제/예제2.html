@@ -31,18 +31,38 @@
       position: relative;
     }
 
+    @keyframes ear_animation {
+      from {
+        transform: rotate(5deg);
+      }
+
+      to {
+        transform: rotate(-5deg);
+      }
+    }
+
     #왼쪽귀 {
       position: absolute;
-      top: -112px;
-      left: 20px;
+      top: -81px;
+      left: 8px;
       z-index: -1;
+
+      transform-origin: right bottom;
+      animation-name: ear_animation; /* 애니메이션이름 */
+      animation-duration: 1s; /* 동작시간 */
+      animation-iteration-count: infinite; /* 반복횟수 - infinite : 무한반복*/
+      animation-direction: alternate; /* 재생방향(정-역) */
+      animation-timing-function: linear; /* 구간별 속도 */
     }
 
     #오른쪽귀 {
       position: absolute;
-      top: -112px;
-      right: 20px;
+      top: -81px;
+      right: 8px;
       z-index: -1;
+
+      transform-origin: left bottom;
+      animation: ear_animation .6s infinite alternate-reverse linear; /* 역-정 */
     }
 
     #수염 {
@@ -92,6 +112,42 @@
       position: absolute;
       top: 246px;
       left: 243px;
+    }
+
+    #얼굴:hover #왼쪽귀,
+    #얼굴:hover #오른쪽귀 {
+      animation-play-state: paused;
+      /* 재생상태 : running(재생, 기본값) paused(일시정지) */
+    }
+
+    @keyframes nose_animation {
+      0% {
+        transform: translateY(0);
+      }
+
+      10% {
+        transform: translateY(-5px);
+      }
+
+      20% {
+        transform: translateY(0px);
+      }
+
+      30% {
+        transform: translateY(-5px);
+      }
+
+      40% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    #코 {
+      animation: nose_animation 5s infinite;
     }
   </style>
 </head>
