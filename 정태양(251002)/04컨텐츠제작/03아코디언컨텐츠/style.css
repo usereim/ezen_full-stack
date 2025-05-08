@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* 최상위 요소를 가리키는 가상클래스(보통은 <html>태그를 나타냄) */
+:root {
+  font-family: "Pretandard";
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  background: #0b0810;
+  position: relative;
+}
+
+#title {
+  filter: contrast(0) brightness(2); /* 이미지에 주는 필터효과 */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 20%;
+}
+
+#link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+#link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#link a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#view {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  gap: 0.6%;
+}
+
+#view input {
+  display: none;
+}
+
+#view label {
+  display: block;
+  width: 11%;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box; /* 테두리 영역까지 크기조절됨. */
+  border-radius: 12px;
+  transition: all .3s;
+}
+
+/* 라디오버튼이 체크되었을때 스타일 */
+#view input:checked + label {
+  flex-grow: 1; /* flex에 의해 커지는 비율(기본값 : 0;) */
+}
