@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/* 리셋 코드 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'Ownglyph_corncorn-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  /* vh : 화면높이비율, vw : 화면너비비율*/
+  background: url("./images/bg.png") no-repeat center,
+    url("./images/bg-pattern.png") center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font: 13px/1.5 "나눔 고딕", "Nanum Gothic", "돋움";
+  color: #323232;
+}
+
+#join {
+  width: 500px;
+  min-height: 390px;
+  /* 최소높이제한 */
+  border: 1px solid #dcdcdc;
+  border-radius: 9px;
+  box-shadow: 0 0 6px #dcdcdc inset;
+  /* 내부그림자 */
+  background: #f2f2f288;
+  background: linear-gradient(90deg, #f2f2f2, white 10px, #f4f4f466 67%);
+  /* https://cssgradient.io 그라디언트 CSS코드 생성사이트 */
+
+  position: relative;
+}
+
+#join>* {
+  margin: 15px 20px;
+}
+
+#join h2 {
+  font-family: 'Ownglyph_corncorn-Rg';
+  font-size: 24px;
+  text-shadow: 1px 1px #ddd;
+  line-height: 1.8;
+  /* 글자 크기의 1.8배 = 24px x 1.8 = 43.2px*/
+  border-bottom: 1px solid #ddd;
+}
+
+#join p {
+  margin-bottom: 10px;
+}
+
+#join label:not([for="accept"]) {
+  display: none;
+}
+
+#join input:not(#accept) {
+  width: 15em;
+  /* em : 글자크기의 배수 */
+  padding: 1em 0.5em 1em 2.5em;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  box-shadow: inset 0 0 4px #dcdcdc;
+  outline: none;
+  background: #f8f8f8 url("./images/u_icons_splite.png") no-repeat;
+  transition: all .4s;
+}
+
+#join input:not(#accept):focus {
+  width: 17em;
+  background-color: #fff;
+  border-color: #7ccbd8;
+}
+
+/* 배경아이콘 위치지정 */
+#join input#name {
+  background-position: 5px 7px;
+}
+
+#join input#name:focus {
+  background-position: 5px -21px;
+}
+
+#join input#phone {
+  background-position: 5px -49px;
+}
+
+#join input#phone:focus {
+  background-position: 5px -78px;
+}
+
+#join input#email {
+  background-position: 5px -106px;
+}
+
+#join input#email:focus {
+  background-position: 5px -134px;
+}
+
+#join input#site {
+  background-position: 5px -162px;
+}
+
+#join input#site:focus {
+  background-position: 5px -190px;
+}
+
+#join input#pw {
+  background-position: 5px -218px;
+}
+
+#join input#pw:focus {
+  background-position: 5px -246px;
+}
+
+#join input + span {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+#join input[required] + span {
+  display: inline;
+}
+
+#join #accept {
+  vertical-align: -2px;
+}
+
+#join [for="accept"] a {
+  color: #31a8d7;
+  text-decoration: none;
+}
+
+#join #add {
+  position: absolute;
+  top: 140px;
+  right: 40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(-35deg, #fff 10%, #e0e0e0 51%);
+  border: 1px solid #cfcfcf;
+  outline: 2px solid #c3d4db;
+}
+
+@keyframes motion {
+  0% {
+    transform: scale(1.1, 0.9);
+  }
+
+  50% {
+    transform: scale(0.9, 1.1);
+  }
+
+  100% {
+    transform: scale(1.1, 0.9);
+  }
+}
+
+#join #btn {
+  margin: 10px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: linear-gradient(-35deg, #7c7c7c 5%, #454545 30%, #000000 51%);
+  text-indent: -9999px;
+  overflow: hidden;
+
+  animation: motion .4s infinite ease-in;
+}
+
+#join #btn:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+/* 가상요소(::before, ::after) */
+#join #btn::before,
+#join #btn::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 3px);
+  left: calc(50% - 12px);
+  width: 24px;
+  height: 6px;
+  background: #fff;
+  opacity: .2;
+}
+
+#join #btn::after {
+  transform: rotate(90deg);
+}

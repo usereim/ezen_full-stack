@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 디자인</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section id="join">
+    <h2 title="회원등록">Registration</h2>
+
+    <form action="">
+      <p>
+        <label for="name">이름</label>
+        <input id="name" type="text" placeholder="이름" required>
+        <span>*</span>
+      </p>
+      <p>
+        <label for="phone">폰 번호</label>
+        <input id="phone" type="tel" placeholder="폰 번호" required>
+        <span>*</span>
+      </p>
+      <p>
+        <label for="email">이메일</label>
+        <input id="email" type="email" placeholder="이메일" required>
+        <span>*</span>
+      </p>
+      <p>
+        <label for="site">웹사이트</label>
+        <input id="site" type="url" placeholder="웹사이트" >
+      </p>
+      <p>
+        <label for="pw">비밀번호</label>
+        <input id="pw" type="password" placeholder="비밀번호" required>
+        <span>*</span>
+      </p>
+      <p>
+        <input id="accept" type="checkbox">
+        <label for="accept">
+          <a href="#">서비스 이용 약관</a>,
+          <a href="#">개인 정보 수집 이용</a>에 동의합니다.
+        </label>
+      </p>
+      <p id="add">
+        <button id="btn" type="submit">회원가입</button>
+      </p>
+    </form>
+  </section> <!-- #join -->
+</body>
+
+</html>
