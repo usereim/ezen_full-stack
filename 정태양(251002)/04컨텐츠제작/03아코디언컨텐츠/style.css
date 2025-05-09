@@ -22,7 +22,8 @@ body {
 }
 
 #title {
-  filter: contrast(0) brightness(2); /* 이미지에 주는 필터효과 */
+  filter: contrast(0) brightness(2);
+  /* 이미지에 주는 필터효과 */
   position: absolute;
   top: 20px;
   left: 20px;
@@ -66,14 +67,165 @@ main {
 #view label {
   display: block;
   width: 11%;
-  background: #fff;
   color: #000;
-  box-sizing: border-box; /* 테두리 영역까지 크기조절됨. */
+  box-sizing: border-box;
+  /* 테두리 영역까지 크기조절됨. */
   border-radius: 12px;
+  transition: all .3s;
+  position: relative;
+  background: linear-gradient(0deg, #fff 22%, #d8d8d8 22%, #fff);
+}
+
+/* 축소상태 */
+#view label .tab_image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  box-sizing: border-box;
+  transition: all 0.6s;
+}
+
+#view label .tab_image img {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  /* 정비율을 유지한 채, 영역을 가득채움. */
+  object-position: 45% 50%;
+  margin-left: -50%;
   transition: all .3s;
 }
 
+#view label:hover .tab_image {
+  border: 1px solid #fff;
+}
+
+#view label:hover .tab_image img {
+  transform: scale(1.4) rotate(-15deg);
+  opacity: 0.6;
+}
+
+#view label .tab_title {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 1vw;
+  /* 화면너비를 기준한 비율 */
+  text-align: center;
+  font-weight: 500;
+  opacity: 0;
+  transition: all .3s;
+}
+
+#view label:hover .tab_title {
+  opacity: 1;
+  top: calc(100% + 10px);
+}
+
+/* 확대되었을 때 */
+#view .contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .2s;
+}
+
+#view .contents .tit {
+  font-family: "Bellefair", selif;
+  font-size: 2.4vw;
+  /* font-weight: 800; */
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+#view .contents .bg {
+  position: absolute;
+  width: 45%;
+  bottom: 47%;
+  right: 3%;
+  opacity: 0.2;
+}
+
+#view .contents .item {
+  position: absolute;
+  width: 100%;
+  bottom: 3%;
+  left: -5%;
+  text-align: center;
+  opacity: 0;
+  transition: all .3s;
+}
+
+#view .contents .item img {
+  width: 92%;
+}
+
+#view .contents .tip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+}
+
+#view .contents .tip dl {
+  background: #fff8;
+  font-size: 1vw;
+  padding: 1em;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transition: all .3s;
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+#view .contents .tip dt {
+  font-size: 1.5vw;
+  margin-bottom: 10px;
+}
+
 /* 라디오버튼이 체크되었을때 스타일 */
-#view input:checked + label {
-  flex-grow: 1; /* flex에 의해 커지는 비율(기본값 : 0;) */
+#view input:checked+label {
+  flex-grow: 1;
+  /* flex에 의해 커지는 비율(기본값 : 0;) */
+}
+
+#view input:checked+label .tab_image {
+  display: none;
+}
+
+#view input:checked+label .contents {
+  opacity: 1;
+}
+
+#view input:checked+label .contents .item {
+  opacity: 1;
+  left: 0;
+  transition-delay: .3s;
+}
+
+#view input:checked+label .tip dl {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#view input:checked+label .tip dl:nth-child(1) {
+  transition-delay: .6s;
+}
+
+#view input:checked+label .tip dl:nth-child(2) {
+  transition-delay: .7s;
+}
+
+#view input:checked+label .tip dl:nth-child(3) {
+  transition-delay: .8s;
 }
