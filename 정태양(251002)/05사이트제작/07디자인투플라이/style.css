@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* 리셋 코드 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: "Montserrat", "NanumBarunGothic";
+  font-size: 12px;
+  line-height: 1.6;
+  background: #999;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+/*
+  [inherit]속성값 : 대부분의 텍스트 관련된 속성들의 기본값.
+    - 부모요소에 설정된 값을 동일하게 따라 설정한다.
+*/
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  color: #fff;
+}
+
+header .inner {
+  padding: 0 100px;
+}
+
+header a:hover {
+  color: #20bec6;
+}
+
+header #logo {
+  margin: 18px 50px 0 15px;
+  float: left;
+  font-size: 0;
+}
+
+header #logo a {
+  width: 100px;
+  height: 28px;
+  text-indent: -9999px;
+  background: url("./images/logo.png") no-repeat;
+  background-size: 100% auto;
+  transition: all 0.2s ease-in-out;
+}
+
+header #logo a:hover {
+  background-position: 0 bottom;
+}
+
+header #gnb {
+  float: left;
+  text-transform: uppercase;
+}
+
+header #gnb li {
+  float: left;
+  margin-top: 8px;
+}
+
+header #gnb a {
+  font-weight: bold;
+  width: 70px;
+  padding: 15px;
+}
+
+header #gnb a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+header #gnb a:hover::after {
+  width: 100%;
+}
+
+header #gnb .sub {
+  padding-bottom: 20px;
+  display: none;
+}
+
+header #gnb .sub li {
+  float: none;
+  margin: 0 0 0 15px;
+}
+
+header #gnb li:hover .sub {
+  display: block;
+}
+
+header #gnb .sub a {
+  font-weight: normal;
+  padding: 0;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+header #gnb .sub a::after {
+  display: none;
+} 
+
+header #gnb .sub a:hover {
+  text-decoration: underline;
+}
+
+header #sns {
+  float: right;
+}
