@@ -12,9 +12,15 @@
   <!-- 웹 폰트 연결 -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="fonts.css">
 
+  <!-- 스와이퍼 플러그인의 스타인(css문서) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- 스와이퍼 플러그인 (js문서) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- 스타일 연결 -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -71,14 +77,90 @@
 
       <div id="sns">
         <ul>
-          <li><a href="#"><i class="xi-instagram"></i></a></li>
-          <li><a href="#"><i class="xi-facebook-official"></i></a></li>
-          <li><a href="#"><i class="xi-naver-square"></i></a></li>
-          <li><a href="#"><i class="xi-search"></i></a></li>
+          <li><a href="#"><i class="xi-instagram xi-2x"></i></a></li>
+          <li><a href="#"><i class="xi-facebook-official xi-2x"></i></a></li>
+          <li><a href="#"><i class="xi-naver-square xi-2x"></i></a></li>
+          <li><a href="#"><i class="xi-search xi-2x"></i></a></li>
         </ul>
       </div> <!-- #sns -->
     </div> <!-- .inner -->
   </header> <!-- header -->
+
+  <main>
+    <section id="main_visual" class="swiper">
+      <!-- 슬라이드 영역 -->
+      <div class="swiper-wrapper">
+        <article class="swiper-slide">
+          <img src="./images/view01.jpg" alt="">
+          <div class="box">
+            <h3>워크앤드 상가주택</h3>
+            <p>Residence / 주거공간인테리어</p>
+            <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+          </div> <!-- .box -->
+        </article>
+        <article class="swiper-slide">
+          <img src="./images/view02.jpg" alt="">
+          <div class="box">
+            <h3>워크앤드 상가주택</h3>
+            <p>Residence / 주거공간인테리어</p>
+            <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+          </div> <!-- .box -->
+        </article>
+        <article class="swiper-slide">
+          <img src="./images/view03.jpg" alt="">
+          <div class="box">
+            <h3>워크앤드 상가주택</h3>
+            <p>Residence / 주거공간인테리어</p>
+            <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+          </div> <!-- .box -->
+        </article>
+        <article class="swiper-slide">
+          <img src="./images/view04.jpg" alt="">
+          <div class="box">
+            <h3>워크앤드 상가주택</h3>
+            <p>Residence / 주거공간인테리어</p>
+            <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+          </div> <!-- .box -->
+        </article>
+        <article class="swiper-slide">
+          <img src="./images/view05.jpg" alt="">
+          <div class="box">
+            <h3>워크앤드 상가주택</h3>
+            <p>Residence / 주거공간인테리어</p>
+            <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+          </div> <!-- .box -->
+        </article>
+        <article class="swiper-slide">
+          <img src="./images/view06.jpg" alt="">
+          <div class="box">
+            <h3>워크앤드 상가주택</h3>
+            <p>Residence / 주거공간인테리어</p>
+            <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+          </div> <!-- .box -->
+        </article>
+      </div> <!-- .swiper-wrapper -->
+
+      <!-- 동그란 버튼(페이지버튼)영역 -->
+      <div class="swiper-pagination">
+      </div> <!-- .swiper-pagenation -->
+    </section> <!-- #main_visual -->
+  </main> <!-- main -->
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      spaceBetween: 10,
+      speed: 800,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
 </body>
 
 </html>
