@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 표만들기(p80)</title>
+
+  <style>
+    #table1 {
+      border: 3px solid #000;
+      width: 400px;
+      height: 300px;
+    }
+
+    #table1 td {
+      border: 3px solid #f00;
+    }
+
+    #table2 {
+      border: 3px solid #000;
+      width: 400px;
+    }
+
+    #table2 tr {
+      height: 80px;
+    }
+
+    #table2 td,
+    #table2 th {
+      border: 1px solid #000;
+      width: 25%;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>최소한의 태그로 표만들기</h2>
+  <table id="table1"> <!-- 테이블 = 표 -->
+    <tr>
+      <td>사과</td>
+      <td>포도</td>
+      <td>딸기</td>
+      <td rowspan="3">바나나</td>
+    </tr> <!-- 행 -->
+    <tr>
+      <td colspan="2"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <hr>
+
+  <h2>웹 표준에 적합한 표만들기</h2>
+  <table id="table2">
+    <caption>
+      1학기 A반 성적표
+    </caption> <!-- 표의 간략설명 -->
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>수학</th>
+      </tr>
+    </thead>
+
+    <tfoot> <!-- 결과행(생략가능, thead다음에 올수도 있다.) -->
+      <tr>
+        <td>합계</td>
+        <td>240</td>
+        <td>210</td>
+        <td>180</td>
+      </tr>
+    </tfoot>
+
+    <tbody> <!-- 내용행의 그룹 -->
+      <tr>
+        <td>보미</td>
+        <td>100</td>
+        <td>90</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>여름</td>
+        <td>100</td>
+        <td>90</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>가을</td>
+        <td>40</td>
+        <td>30</td>
+        <td>20</td>
+      </tr>
+    </tbody>  
+  </table>
+</body>
+
+</html>
