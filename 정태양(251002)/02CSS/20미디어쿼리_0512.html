@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20 미디어쿼리</title>
+
+  <style>
+    body {
+      background: #ccc;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    /* 화면의 너비가 500px이하 = 화면 최대너비가 500px인 경우 */
+    @media (max-width:500px) {
+      body {
+        background: #fcc;
+      }
+    }
+
+    /* 화면의 너비가 1200px이상 */
+    @media (min-width:1200px) {
+      body {
+        background: #cfc;
+      }
+    }
+
+    /* 화면의 너비가 700px ~ 1000px 사이인 경우 */
+    @media (min-width:700px) and (max-width:1000px) {
+      body {
+        background: #ccf;
+      }
+    }
+
+    /* 화면의 너비가 600px이하거나, 1100px이상인 경우 */
+    @media (max-width:600px), (min-width:1100px) {
+      body {
+        color: red;
+      }
+    }
+
+    /* 기본 스타일(pc기준) */
+    
+    /* 태블릿기준(1024px이하) */
+    @media (max-width:1024px) {
+
+    }
+
+    /* 모바일기준(768px이하) */
+    @media (max-width:768px) {
+
+    }
+    
+  </style>
+</head>
+<body>
+  <p>미디어의 타입이 아니라, 미디어(디바이스)의 특성에 따라
+    스타일을 적용.
+  </p>
+  <!-- 
+    width : 화면(창)의 너비 - ★★★★★
+    height : 화면(창)의 높이
+    device-width : 디바이스의 너비
+    device-height : 디바이스의 높이
+    orientation : 디바이스의 방향(가로, 세로)
+    aspect-ratio : 디바이스의 가로세로비
+    .....(그외 여러가지)
+  -->
+</body>
+</html>
